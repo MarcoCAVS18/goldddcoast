@@ -2,7 +2,7 @@ export const fabricas = [
   {
     id: 'fab_001',
     nombre: 'Ausfab Stainless Pty Ltd',
-    email: 'info@ausfabstainless.com.au',
+    email: '',
     direccion: 'Helensvale QLD 4212',
     barrio: 'Helensvale',
     lat: -27.9005,
@@ -15,7 +15,7 @@ export const fabricas = [
   {
     id: 'fab_002',
     nombre: 'SCL Welding',
-    email: 'info@sclwelding.com.au',
+    email: '',
     direccion: 'Gold Coast QLD 4220',
     barrio: 'Burleigh Heads',
     lat: -28.0857,
@@ -28,7 +28,7 @@ export const fabricas = [
   {
     id: 'fab_003',
     nombre: 'QLD Metal Recyclers',
-    email: 'info@qldmetalrecyclers.com.au',
+    email: '',
     direccion: 'Yatala QLD 4207',
     barrio: 'Yatala',
     lat: -27.8340,
@@ -41,7 +41,7 @@ export const fabricas = [
   {
     id: 'fab_004',
     nombre: 'Hydraulink Gold Coast',
-    email: 'goldcoast@hydraulink.com.au',
+    email: '',
     direccion: 'Gold Coast QLD 4217',
     barrio: 'Surfers Paradise',
     lat: -28.0022,
@@ -54,7 +54,7 @@ export const fabricas = [
   {
     id: 'fab_005',
     nombre: 'Hydraulink Yatala',
-    email: 'yatala@hydraulink.com.au',
+    email: '',
     direccion: 'Yatala QLD 4207',
     barrio: 'Yatala',
     lat: -27.8335,
@@ -67,7 +67,7 @@ export const fabricas = [
   {
     id: 'fab_006',
     nombre: 'Plastics Online Gold Coast',
-    email: 'info@plasticsonline.com.au',
+    email: '',
     direccion: 'Gold Coast QLD 4220',
     barrio: 'Burleigh Heads',
     lat: -28.0850,
@@ -93,7 +93,7 @@ export const fabricas = [
   {
     id: 'fab_008',
     nombre: 'Alive Technologies',
-    email: 'info@alivetechnologies.com.au',
+    email: '',
     direccion: 'Gold Coast QLD 4215',
     barrio: 'Southport',
     lat: -27.9672,
@@ -106,7 +106,7 @@ export const fabricas = [
   {
     id: 'fab_009',
     nombre: 'Coast Metal Fabrication',
-    email: 'info@coastmetalfab.com.au',
+    email: '',
     direccion: 'Yatala QLD 4207',
     barrio: 'Yatala',
     lat: -27.8338,
@@ -119,7 +119,7 @@ export const fabricas = [
   {
     id: 'fab_010',
     nombre: 'GC Powder Coating',
-    email: 'info@gcpowdercoating.com.au',
+    email: '',
     direccion: 'Currumbin QLD 4223',
     barrio: 'Currumbin',
     lat: -28.1540,
@@ -132,7 +132,7 @@ export const fabricas = [
   {
     id: 'fab_011',
     nombre: 'Euro Pumps Gold Coast',
-    email: 'info@europumps.com.au',
+    email: '',
     direccion: 'Gold Coast QLD 4220',
     barrio: 'Burleigh Heads',
     lat: -28.0854,
@@ -145,7 +145,7 @@ export const fabricas = [
   {
     id: 'fab_012',
     nombre: 'GC Sheet Metal Works',
-    email: 'info@gcsheetmetal.com.au',
+    email: '',
     direccion: 'Robina QLD 4226',
     barrio: 'Robina',
     lat: -28.0682,
@@ -158,7 +158,7 @@ export const fabricas = [
   {
     id: 'fab_013',
     nombre: 'Neumann Engineering GC',
-    email: 'info@neumannengineering.com.au',
+    email: '',
     direccion: 'Gold Coast QLD 4217',
     barrio: 'Surfers Paradise',
     lat: -28.0028,
@@ -171,7 +171,7 @@ export const fabricas = [
   {
     id: 'fab_014',
     nombre: 'Coomera Industrial Supply',
-    email: 'sales@coomeraindustrial.com.au',
+    email: '',
     direccion: 'Coomera QLD 4209',
     barrio: 'Coomera',
     lat: -27.8342,
@@ -184,7 +184,7 @@ export const fabricas = [
   {
     id: 'fab_015',
     nombre: 'Pacific Industrial Products',
-    email: 'info@pacificindustrial.com.au',
+    email: '',
     direccion: 'Yatala QLD 4207',
     barrio: 'Yatala',
     lat: -27.8330,
@@ -197,7 +197,7 @@ export const fabricas = [
   {
     id: 'fab_016',
     nombre: 'GC Foods Manufacturing',
-    email: 'info@gcfoods.com.au',
+    email: '',
     direccion: 'Racecourse Dr, Bundall QLD 4217',
     barrio: 'Bundall',
     lat: -28.0182,
