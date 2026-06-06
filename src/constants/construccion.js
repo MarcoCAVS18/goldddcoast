@@ -106,7 +106,7 @@ export const construccion = [
   {
     id: 'con_009',
     nombre: 'Lendlease Queensland',
-    email: '',
+    email: 'careers@lendlease.com',
     direccion: 'Gold Coast QLD 4215',
     barrio: 'Southport',
     lat: -27.9675,
@@ -145,7 +145,7 @@ export const construccion = [
   {
     id: 'con_012',
     nombre: 'Roberts Co Construction',
-    email: '',
+    email: 'enquiriesau@roberts.co',
     direccion: 'Southport QLD 4215',
     barrio: 'Southport',
     lat: -27.9665,

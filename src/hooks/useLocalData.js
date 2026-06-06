@@ -2,17 +2,20 @@ import { useState, useCallback, useEffect } from 'react';
 import { bares as baresInit } from '../constants/bares';
 import { construccion as construccionInit } from '../constants/construccion';
 import { fabricas as fabricasInit } from '../constants/fabricas';
+import { reclutadoras as reclutadorasInit } from '../constants/reclutadoras';
 
 const STORAGE_KEYS = {
   bares: 'wgc_bares',
   construccion: 'wgc_construccion',
   fabricas: 'wgc_fabricas',
+  reclutadoras: 'wgc_reclutadoras',
 };
 
 const INITIAL_DATA = {
   bares: baresInit,
   construccion: construccionInit,
   fabricas: fabricasInit,
+  reclutadoras: reclutadorasInit,
 };
 
 const cargarDesdStorage = (sector) => {

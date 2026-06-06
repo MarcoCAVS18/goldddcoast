@@ -1,9 +1,10 @@
-import { Beer, HardHat, Factory, Plus } from 'lucide-react';
+import { Beer, HardHat, Factory, Users, Plus } from 'lucide-react';
 
 const SECTORES = [
   { id: 'bares', label: 'Bares', icon: Beer },
   { id: 'construccion', label: 'Construccion', icon: HardHat },
   { id: 'fabricas', label: 'Fabricas', icon: Factory },
+  { id: 'reclutadoras', label: 'Reclutadoras', icon: Users },
 ];
 
 const SectorToggle = ({ sector, onSectorChange, onAgregar, mostrarBotonAgregar = true }) => {

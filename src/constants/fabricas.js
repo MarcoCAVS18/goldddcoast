@@ -2,7 +2,7 @@ export const fabricas = [
   {
     id: 'fab_001',
     nombre: 'Ausfab Stainless Pty Ltd',
-    email: '',
+    email: 'sales@ausfabstainless.com.au',
     direccion: 'Helensvale QLD 4212',
     barrio: 'Helensvale',
     lat: -27.9005,
@@ -93,7 +93,7 @@ export const fabricas = [
   {
     id: 'fab_008',
     nombre: 'Alive Technologies',
-    email: '',
+    email: 'info@alivetec.com',
     direccion: 'Gold Coast QLD 4215',
     barrio: 'Southport',
     lat: -27.9672,

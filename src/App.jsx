@@ -3,6 +3,7 @@ import { Briefcase } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import TrackerView from './components/TrackerView';
 import MapView from './components/MapView';
+import EmailView from './components/EmailView';
 
 function App() {
   const [activeTab, setActiveTab] = useState('tracker');
@@ -23,6 +24,7 @@ function App() {
           <div className="max-w-7xl mx-auto">
             {activeTab === 'tracker' && <TrackerView />}
             {activeTab === 'map' && <MapView />}
+            {activeTab === 'email' && <EmailView />}
           </div>
         </div>
       </main>

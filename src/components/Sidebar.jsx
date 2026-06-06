@@ -1,10 +1,11 @@
-import { LayoutList, Map } from 'lucide-react';
+import { LayoutList, Map, Mail } from 'lucide-react';
 import clsx from 'clsx';
 
 const Sidebar = ({ activeTab, setActiveTab }) => {
   const items = [
     { id: 'tracker', label: 'Tracker', icon: LayoutList },
     { id: 'map', label: 'Mapa', icon: Map },
+    { id: 'email', label: 'Emails', icon: Mail },
   ];
 
   return (
@@ -50,7 +51,7 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
           <button
             onClick={() => setActiveTab('tracker')}
             className={clsx(
-              'flex flex-col items-center justify-center gap-1 px-6 py-2 rounded-lg transition-all duration-200',
+              'flex flex-col items-center justify-center gap-1 px-4 py-2 rounded-lg transition-all duration-200',
               activeTab === 'tracker' ? 'text-accent' : 'text-dark-subtext hover:text-dark-text'
             )}
           >
@@ -73,6 +74,17 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
             <span className={clsx('text-[10px] font-medium mt-1', activeTab === 'map' ? 'text-accent' : 'text-dark-text')}>
               Mapa
             </span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('email')}
+            className={clsx(
+              'flex flex-col items-center justify-center gap-1 px-4 py-2 rounded-lg transition-all duration-200',
+              activeTab === 'email' ? 'text-accent' : 'text-dark-subtext hover:text-dark-text'
+            )}
+          >
+            <Mail size={22} />
+            <span className="text-xs font-medium">Emails</span>
           </button>
         </div>
       </nav>
