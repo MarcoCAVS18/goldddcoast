@@ -3,11 +3,12 @@ import {
   Search, Check, X, Edit3, Mail, Filter, EyeOff, Eye,
   CheckSquare, Square, Download, ShieldAlert, ShieldCheck,
 } from 'lucide-react';
-import { useLocalData } from '../hooks/useLocalData';
+import { useSupabaseData as useLocalData } from '../hooks/useSupabaseData';
 import { useExportCSV } from '../hooks/useExportCSV';
 import { STATUS_OPTIONS } from '../constants/statusOptions';
 import SectorToggle from './SectorToggle';
 import CreateCompanyModal from './CreateCompanyModal';
+import Spinner from './Spinner';
 
 const BARRIOS_GC = [
   'Surfers Paradise', 'Broadbeach', 'Burleigh Heads', 'Mermaid Beach',
@@ -18,7 +19,7 @@ const BARRIOS_GC = [
 
 const TrackerView = () => {
   const [sector, setSector] = useState('bares');
-  const { data, actualizarItem, crearItem } = useLocalData(sector);
+  const { data, actualizarItem, crearItem, loading } = useLocalData(sector);
   const { exportarCSV } = useExportCSV();
 
   const [mostrarOcultos, setMostrarOcultos] = useState(false);
@@ -185,6 +186,14 @@ const TrackerView = () => {
   };
 
   const labelSector = sector === 'bares' ? 'Bares' : sector === 'construccion' ? 'Construccion' : 'Fabricas';
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-32">
+        <Spinner size={48} label="Cargando empresas..." />
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">

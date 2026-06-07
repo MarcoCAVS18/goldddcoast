@@ -477,8 +477,8 @@ export const construccion = [
     lng: 153.4480,
     status: 'Pendiente',
     emailVerified: true,
-    hidden: false,
-    notas: 'Custom homes y renovaciones de lujo en Gold Coast. HIA Award winner 2024/2025. QBCC #1178316. HIA Member #544956. Tel: 0424 507 135.',
+    hidden: true,
+    notas: 'DUPLICADO de con_029. Custom homes y renovaciones de lujo en Gold Coast. HIA Award winner 2024/2025. QBCC #1178316. HIA Member #544956. Tel: 0424 507 135.',
   },
   {
     id: 'con_038',
@@ -529,8 +529,8 @@ export const construccion = [
     lng: 153.5100,
     status: 'Pendiente',
     emailVerified: true,
-    hidden: false,
-    notas: 'Casas nuevas, custom builds y renovaciones. Contacto: Roy Allen. Tel: 0477 496 659. Housing & Construction Awards 2019 Regional Winner. Master Builders QLD.',
+    hidden: true,
+    notas: 'DUPLICADO de con_034. Casas nuevas, custom builds y renovaciones. Contacto: Roy Allen. Tel: 0477 496 659. Housing & Construction Awards 2019 Regional Winner. Master Builders QLD.',
   },
   {
     id: 'con_042',
@@ -594,8 +594,8 @@ export const construccion = [
     lng: 153.0500,
     status: 'Pendiente',
     emailVerified: true,
-    hidden: false,
-    notas: 'Constructora commercial award-winning. Hospitality, educacion, retail y residencial. Atiende toda la Gold Coast con proyectos frecuentes en Broadbeach, Burleigh, Surfers, Southport. Tel: (07) 3142 5915. Lun-Vie 8am-5pm.',
+    hidden: true,
+    notas: 'DUPLICADO de con_028. Constructora commercial award-winning. Hospitality, educacion, retail y residencial. Atiende toda la Gold Coast con proyectos frecuentes en Broadbeach, Burleigh, Surfers, Southport. Tel: (07) 3142 5915. Lun-Vie 8am-5pm.',
   },
   {
     id: 'con_047',

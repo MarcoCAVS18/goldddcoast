@@ -1,9 +1,10 @@
 import { useState, useMemo } from 'react';
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
 import { ExternalLink } from 'lucide-react';
-import { useLocalData } from '../hooks/useLocalData';
+import { useSupabaseData as useLocalData } from '../hooks/useSupabaseData';
 import { STATUS_COLORS } from '../constants/statusOptions';
 import SectorToggle from './SectorToggle';
+import Spinner from './Spinner';
 import 'leaflet/dist/leaflet.css';
 
 // Centro y zoom inicial del mapa centrado en Gold Coast
@@ -12,7 +13,7 @@ const GC_ZOOM = 12;
 
 const MapView = () => {
   const [sector, setSector] = useState('bares');
-  const { data } = useLocalData(sector);
+  const { data, loading } = useLocalData(sector);
 
   const marcadores = useMemo(() => {
     return data.filter(item => !item.hidden && item.lat && item.lng);
@@ -29,6 +30,14 @@ const MapView = () => {
     const query = encodeURIComponent(`${item.nombre} ${item.direccion}`);
     return `https://www.google.com/maps/search/?api=1&query=${query}`;
   };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-32">
+        <Spinner size={48} label="Cargando mapa..." />
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">

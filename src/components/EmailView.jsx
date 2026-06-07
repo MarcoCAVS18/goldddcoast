@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Sparkles, Copy, CheckCheck, RefreshCw, Mail } from 'lucide-react';
 import SectorToggle from './SectorToggle';
-import { useLocalData } from '../hooks/useLocalData';
-
-const STORAGE_KEY_TEMPLATES = 'wgc_email_templates';
+import { useSupabaseData as useLocalData } from '../hooks/useSupabaseData';
+import { supabase } from '../lib/supabase';
+import Spinner from './Spinner';
 
 const SECTOR_LABELS = {
   bares: 'Bares & Restaurantes',
@@ -12,37 +12,49 @@ const SECTOR_LABELS = {
   reclutadoras: 'Reclutadoras',
 };
 
-const cargarTemplates = () => {
-  try {
-    const almacenado = localStorage.getItem(STORAGE_KEY_TEMPLATES);
-    if (almacenado) return JSON.parse(almacenado);
-  } catch {
-    // si falla, usamos objeto vacio
-  }
-  return { bares: '', construccion: '', fabricas: '', reclutadoras: '' };
-};
-
 const EmailView = () => {
   const [sector, setSector] = useState('bares');
-  const [templates, setTemplates] = useState(cargarTemplates);
+  const [templates, setTemplates] = useState({
+    bares: '', construccion: '', fabricas: '', reclutadoras: '',
+  });
   const [cargandoIA, setCargandoIA] = useState(false);
   const [copiadoTemplate, setCopiadoTemplate] = useState(false);
   const [errorIA, setErrorIA] = useState('');
   const [emailCopiado, setEmailCopiado] = useState(null);
+  // ref para el debounce de guardado automatico
+  const debounceRef = useRef({});
 
-  const { data } = useLocalData(sector);
+  const { data, loading } = useLocalData(sector);
 
-  // guarda templates en storage al cambiar
+  // carga todos los templates desde Supabase al montar
   useEffect(() => {
-    try {
-      localStorage.setItem(STORAGE_KEY_TEMPLATES, JSON.stringify(templates));
-    } catch {
-      // storage lleno
-    }
-  }, [templates]);
+    const cargar = async () => {
+      const { data: filas } = await supabase
+        .from('email_templates')
+        .select('sector, texto');
+      if (filas) {
+        const mapa = Object.fromEntries(filas.map(f => [f.sector, f.texto ?? '']));
+        setTemplates(prev => ({ ...prev, ...mapa }));
+      }
+    };
+    cargar();
+  }, []);
+
+  // guarda en Supabase con debounce de 1.5s para no saturar en cada tecla
+  const guardarTemplate = (sec, texto) => {
+    clearTimeout(debounceRef.current[sec]);
+    debounceRef.current[sec] = setTimeout(async () => {
+      await supabase
+        .from('email_templates')
+        .update({ texto })
+        .eq('sector', sec);
+    }, 1500);
+  };
 
   const handleTextoChange = (e) => {
-    setTemplates(prev => ({ ...prev, [sector]: e.target.value }));
+    const texto = e.target.value;
+    setTemplates(prev => ({ ...prev, [sector]: texto }));
+    guardarTemplate(sector, texto);
     if (errorIA) setErrorIA('');
   };
 
@@ -90,6 +102,7 @@ The email should sound like it was written by a real person, not a corporation.`
       const mejorado = result.choices?.[0]?.message?.content?.trim();
       if (mejorado) {
         setTemplates(prev => ({ ...prev, [sector]: mejorado }));
+        guardarTemplate(sector, mejorado);
       }
     } catch (err) {
       setErrorIA(`Error al conectar con la IA: ${err.message}`);
@@ -125,6 +138,11 @@ The email should sound like it was written by a real person, not a corporation.`
 
   return (
     <div className="space-y-6">
+      {loading && (
+        <div className="flex items-center justify-center py-16">
+          <Spinner size={40} label="Cargando empresas..." />
+        </div>
+      )}
       {/* Encabezado */}
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-1">
