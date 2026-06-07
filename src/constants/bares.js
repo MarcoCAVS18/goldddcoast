@@ -184,7 +184,7 @@ export const bares = [
   {
     id: 'bar_015',
     nombre: 'Nineteen at the Star',
-    email: '',
+    email: 'nineteengc@star.com.au',
     direccion: 'Level 19, The Darling, 1 Casino Dr, Broadbeach QLD 4218',
     barrio: 'Broadbeach',
     lat: -28.0345,
@@ -236,7 +236,7 @@ export const bares = [
   {
     id: 'bar_019',
     nombre: 'Lockwood Bar',
-    email: '',
+    email: 'info@wickednightlifetours.com.au',
     direccion: '7B Justin Ln, Burleigh Heads QLD 4220',
     barrio: 'Burleigh Heads',
     lat: -28.0852,
@@ -340,7 +340,7 @@ export const bares = [
   {
     id: 'bar_027',
     nombre: 'The Malibu Racquet Club',
-    email: '',
+    email: 'info@maliburacquetclub.com',
     direccion: '1740 Gold Coast Hwy, Burleigh Heads QLD 4220',
     barrio: 'Burleigh Heads',
     lat: -28.0843,
@@ -418,7 +418,7 @@ export const bares = [
   {
     id: 'bar_033',
     nombre: 'BLVD Cafe & Bar',
-    email: '',
+    email: 'HA7P0@accor.com',
     direccion: 'Cnr Surfers Paradise Blvd & Hanlan St, Surfers Paradise QLD 4217',
     barrio: 'Surfers Paradise',
     lat: -28.0028,
@@ -1471,7 +1471,7 @@ export const bares = [
   {
     id: 'bar_113',
     nombre: 'Arundel Tavern',
-    email: '',
+    email: 'marketing@arundeltavern.com.au',
     direccion: '226 Napper Road, Arundel QLD 4214',
     barrio: 'Arundel',
     lat: -27.9450,

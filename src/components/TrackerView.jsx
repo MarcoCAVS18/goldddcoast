@@ -185,7 +185,7 @@ const TrackerView = () => {
     }
   };
 
-  const labelSector = sector === 'bares' ? 'Bares' : sector === 'construccion' ? 'Construccion' : 'Fabricas';
+  const labelSector = { bares: 'Bares', construccion: 'Construccion', fabricas: 'Fabricas', reclutadoras: 'Reclutadoras' }[sector] ?? 'Lugares';
 
   if (loading) {
     return (
