@@ -477,7 +477,7 @@ export const fabricas = [
     lng: 153.3750,
     status: 'Pendiente',
     emailVerified: true,
-    hidden: false,
+    hidden: true,
     notas: 'Acero estructural, metalwork residencial y comercial, modificaciones de contenedores maritimos. Desde 1983. Cubre Gold Coast, Nerang, Arundel, Biggera Waters, Hope Island, Brisbane. ABN: 26 249 104 782. Tel: 07 5594 0125.',
   },
   {
@@ -503,7 +503,7 @@ export const fabricas = [
     lng: 153.3550,
     status: 'Pendiente',
     emailVerified: true,
-    hidden: false,
+    hidden: true,
     notas: 'Acero inoxidable, aluminio, cobre, bronce, acero ligero/pesado, plasma cutting y powder coating. Fabricacion custom. ABN: 87 133 090 856. Tel: 07 5574 4951. Lun-Jue 6am-3pm, Vie 6am-1pm.',
   },
   {
@@ -661,6 +661,19 @@ export const fabricas = [
     emailVerified: null,
     hidden: false,
     notas: 'Powder coating y recubrimientos industriales. Tel: 07 5597 2227. Sin email visible en sitio.',
+  },
+  {
+    id: 'fab_053',
+    nombre: 'Gold Coast Food Productions',
+    email: 'jack@goldcoastfoodproductions.com',
+    direccion: '30 Christine Ave, Miami QLD 4220',
+    barrio: 'Miami',
+    lat: -28.0760,
+    lng: 153.4450,
+    status: 'Pendiente',
+    emailVerified: true,
+    hidden: false,
+    notas: 'Produccion de alimentos envasados al vacio para restaurantes y negocios de comida. Salsas, proteinas sous-vide, productos bistro/pub y cocina asiatica/mediterranea. Tel: 0421 100 326. Lun-Jue 7am-7pm, Vie-Sab 7am-4pm.',
   },
   {
     id: 'fab_048',
