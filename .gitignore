@@ -8,6 +8,9 @@ dist/
 *.log
 npm-debug.log*
 
+# Temp files
+*.tmp
+
 # Environment
 .env
 .env.local
